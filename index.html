@@ -40,7 +40,7 @@
     <![endif]-->
   </head>
   <body>
-    <canvas id="Background" data-processing-sources="http://glompix.com/bubbles.pde" width="window.innerWidth" height="window.innerHeight" style="position:fixed; left:0; top:0;"></canvas>
+    <canvas id="Background" data-processing-sources="bubbles.pde" width="window.innerWidth" height="window.innerHeight" style="position:fixed; left:0; top:0;"></canvas>
     <div style="position:fixed;left:0;top:0;width:100%;height:100%;opacity:0;"></div>
     <div class="container" style="z-index:1;">
       <div class="row">
@@ -98,14 +98,6 @@
     </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/processing.js/1.4.8/processing.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        var apiKey = '2EC61FC3F12CC4274E7A37F91FCD200F';
-        var requestUrl = 'https://api.steampowered.com/IDOTA2Match_570/GetMatchHistory/V001/?account_id=000000&key=' + apiKey;
-        $.get(requestUrl, function (data) {
-          $('#dota-stats').text(JSON.stringify(data));
-        });
-      });
-    </script>
+    <script src="js/main.js"></script>
   </body>
 </html>
